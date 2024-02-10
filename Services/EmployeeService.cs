@@ -19,7 +19,7 @@ namespace EmployeeManagement.Services
             {
                 Username = employeeDTO.Username,
                 Password = employeeDTO.Password,
-                Role = employeeDTO.Role,
+                Role = "EMPLOYEE",
                 ManagerID = ManagerId,
                 EmployeeId = employees.Count() + 1,
                 Leaves = new List<Leave>()
@@ -28,6 +28,27 @@ namespace EmployeeManagement.Services
 
 
             employees.Add(employee);
+
+        }
+
+
+        public void AddManager(EmployeeDTO employeeDTO)
+        {
+
+
+            Employee manager = new Employee
+            {
+                Username = employeeDTO.Username,
+                Password = employeeDTO.Password,
+                Role = "MANAGER",
+                ManagerID = 0,
+                EmployeeId = employees.Count() + 1,
+                Leaves = new List<Leave>()
+
+            };
+
+
+            employees.Add(manager);
 
         }
 

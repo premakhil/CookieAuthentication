@@ -51,12 +51,34 @@ namespace EmployeeManagement.Controllers
 
         }
 
+        //[HttpPost("employees")]
+        //[Authorize(Roles = "SUPERADMIN,MANAGER")]
+        //public IActionResult AddEmployee([FromBody] EmployeeDTO employeeDTO)
+        //{
+        //    int ManagerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+        //    _employeeService.AddEmployee(employeeDTO,ManagerId);
+        //    return Ok();
+
+        //}
+
+
+
         [HttpPost("employees")]
-        [Authorize(Roles = "SUPERADMIN,MANAGER")]
+        [Authorize(Roles = "MANAGER")]
         public IActionResult AddEmployee([FromBody] EmployeeDTO employeeDTO)
         {
             int ManagerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            _employeeService.AddEmployee(employeeDTO,ManagerId);
+            _employeeService.AddEmployee(employeeDTO, ManagerId);
+            return Ok();
+
+        }
+
+
+        [HttpPost("managers")]
+        [Authorize(Roles = "SUPERADMIN")]
+        public IActionResult AddManager([FromBody] EmployeeDTO employeeDTO)
+        {
+            _employeeService.AddManager(employeeDTO);
             return Ok();
 
         }

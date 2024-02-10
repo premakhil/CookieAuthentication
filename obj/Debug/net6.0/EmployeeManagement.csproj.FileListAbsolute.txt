@@ -30,3 +30,4 @@ C:\Users\akhilprem\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\
 C:\Users\akhilprem\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net6.0\EmployeeManagement.pdb
 C:\Users\akhilprem\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net6.0\EmployeeManagement.genruntimeconfig.cache
 C:\Users\akhilprem\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net6.0\ref\EmployeeManagement.dll
+C:\Users\akhilprem\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net6.0\EmployeeManagement.sourcelink.json
